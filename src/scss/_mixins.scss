@@ -1,0 +1,7 @@
+// MEDIA QUERY MANAGER
+@mixin respond($breakpoint) {
+  // tab-land : 1100px
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 68.75em) { @content }
+  }
+}

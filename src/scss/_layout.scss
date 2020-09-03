@@ -1,0 +1,35 @@
+.container {
+  max-width: 120rem;
+  margin: 4vw auto;
+  background-color: $color-white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2rem 6rem 0.5rem rgba(101,90,86,0.2);
+  display: grid;
+  grid-template-columns: 1.1fr 2fr 1.1fr;
+  grid-template-rows: 10rem minmax(100rem, auto);
+  grid-template-areas: "head head head" "list recipe shopping";
+  
+  @include respond(tab-land) {
+    width: 100%;
+    margin: 0 auto;  // autoを追加
+    border-radius: 0;
+  }
+}
+
+.header {
+  grid-area: head;
+  background-color: $color-white-dark-1;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  &__link:focus { outline: none; }
+  
+  &__logo {
+    margin-left: 4rem;
+    height: 4.5rem;
+    display: block;
+  }
+}
